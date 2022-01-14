@@ -1,172 +1,169 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<title>Cate Hazleden-Butler Project 2 FEWD Acadamy Xi</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta content='en-us' http-equiv='content-language'>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
+  <title>Wedding Invitation Previewer Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@400;900&family=Elsie:wght@400;900&family=Oi&family=Smythe&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-
 </head>
-    <body>
-        <div id="mainContainer">
 
-            <div id=leftScreenContainer>
-        
-              <h2>Choose Your Wedding Invitation Design</h2>
-        
-              <!-- Flex Box with buttons -->
-              
-              <div id="flexContainer">
-        
-                <div class="innerFlex">
-        
-                  <div class="btnContainer1">  
-        
-                    <button class="button" id="inv1Btn" onclick="inv1Prev()" style="background-image: url('inviteImages/floral_2.png');">Bouquet</button>
-        
-                  </div>
-        
-                </div>
-                        
-                <div class="innerFlex">
-        
-                  <div class="btnContainer2">  
-        
-                    <button class="button" id="inv2Btn" onclick="inv2Prev()" style="background-image: url('inviteImages/stripes_thumb.png'); background-repeat: no-repeat; background-size: cover;">Racing to the Alter</button>
-                    
-                  </div>
-                </div>
-        
-                <div class="innerFlex">
-        
-                  <div class="btnContainer3">
-        
-                    <button class="button" id="inv3Btn" onclick="inv3Prev()" style="background-image: url('inviteImages/Swirls_blur.png');">Dizzy in Love</button>
-        
-                  </div>
-                </div>
-        
-                <!-- Trigger/Open The Modal -->
-                <button id="modBtn">Personalise</button>   
-              
-              </div>
-        
-              <!-- The Modal -->
-              <div id="myModal" class="modal">
-        
-                <!-- Modal content -->
-                <div class="modal-content">
-                  <span class="close">&times;</span>
-                  <!--Form with real-time typing here-->
-                  <form id="basicDetails">
-        
-                    <label for="fname">First Partner's Name</label><br>
-                    <input type="text" name="fname" id="fname">
-        
-                    <br>
-                    <label for="sname">Second Partner's Name</label><br>
-                    <input type="text" name="sname" id="sname">
-                    
-                    <br>
-                    <label for="date">Date of Wedding</label><br>
-                    <input type="text" name="date" id="date">
-        
-                    <br>
-                    <label for="time">Time</label><br>
-                    <input type="text" name="time" id="time">
-        
-                    <br>
-                    <label for="address">Location of Ceremony</label><br>
-                    <input type="text" name="address" id="address">
-                    <br>
-                    <input type="reset" name="reset" id="modalreset">
-        
-                  </form>
-                </div>
-              </div>
-        
-            </div>
-            
-            <div id=rightScreenContainer>
-                  
-              <div id="prevBorder">
-        
-                <p id="prevPara">Preview your wedding invitation here!</p>      
-        
-                 
-                  <!--invitation previews-->
-                  
-                <div id="invContainer" style="height: 100%; width: 100%; background-repeat: no-repeat; background-size: cover;">
-        
-                  <img id="inv1" src="./inviteImages/floral_2.png" alt="flowers"/>
-        
-                  <img id="inv2"  src="inviteImages/stripes_edit.png" alt="stripes image"/>
-        
-                  <img id="inv3"  src="./inviteImages/Swirls_blur.png" alt="swirls image"/>
-        
-                  <div id="invDisplay">
-        
-                    <table id="invInner">
-        
-                      <!-- Display Text from keyup events-->  
-                      <tr> 
-                         <td id="iP1">
-                           <span id="invPtrOne"></span>
-                        </td>
-                      </tr>
-        
-                      <tr>
-                        <td id="ptnrAnd">and</td>
-                      </tr>
-        
-                      <tr>
-                        <td id="iP2"><span id="invPtrTwo"></span></td> 
-                      </tr>       
-        
-                      <tr>
-                        <td id="cele">invite you to celebrate their marriage</td>
-                      </tr>
-                    
-                      <tr>
-                        <td id="iP3"><span id="wedDate"></span>
-                        </td> 
-                      </tr>
-        
-                      <tr>
-                        <td id="preTime">at</td>
-                      </tr>
-        
-                      <tr>
-                        <td id="iP4"><span id="wedTime"></span>
-                        </td>
-                      </tr>
-        
-                      <tr>
-                        <td id="iP5"><span id="wedAdd"></span></td>
-                      </tr>
-                    </table>
-        
-                  </div>
-        
-                </div>
-        
-                
-        
-                  
-                
-              </div>
-            </div>
-        
+<body>
+
+  <div id="mainContainer">
+
+    <div id=leftScreenContainer>
+
+      <h2>Choose Your Design</h2>
+
+      <!-- Flex Box with buttons -->
+      
+      <div id="flexContainer">
+
+        <div class="innerFlex">
+
+          <div class="btnContainer1">  
+
+            <button class="button" id="inv1Btn" onclick="inv1Prev()" style="background-image: url('inviteImages/floral_2.png');">Bouquet</button>
+
           </div>
 
+        </div>
+                
+        <div class="innerFlex">
+
+          <div class="btnContainer2">  
+
+            <button class="button" id="inv2Btn" onclick="inv2Prev()" style="background-image: url('inviteImages/stripes_thumb.png'); background-repeat: no-repeat; background-size: cover;">Racing to the Alter</button>
+            
+          </div>
+        </div>
+
+        <div class="innerFlex">
+
+          <div class="btnContainer3">
+
+            <button class="button" id="inv3Btn" onclick="inv3Prev()" style="background-image: url('inviteImages/Swirls_blur.png');">Dizzy in Love</button>
+
+          </div>
+        </div>
+
+        <!-- Trigger/Open The Modal -->
+        <button id="modBtn">Personalise</button>   
+      
+      </div>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <!--Form with real-time typing here-->
+          <form id="basicDetails">
+
+            <label for="fname">First Partner's Name</label><br>
+            <input type="text" name="fname" id="fname">
+
+            <br>
+            <label for="sname">Second Partner's Name</label><br>
+            <input type="text" name="sname" id="sname">
+            
+            <br>
+            <label for="date">Date of Wedding</label><br>
+            <input type="text" name="date" id="date">
+
+            <br>
+            <label for="time">Time</label><br>
+            <input type="text" name="time" id="time">
+
+            <br>
+            <label for="address">Location of Ceremony</label><br>
+            <input type="text" name="address" id="address">
+            <br>
+            <input type="button" onclick="btnReset()" value="Reset" id="modalreset">
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+    
+    <div id=rightScreenContainer>
+          
+      <div id="prevBorder">
+
+        <p id="prevPara">Preview your wedding invitation here!</p>      
+
+         
+          <!--invitation previews-->
+          
+        <div id="invContainer" style="height: 100%; width: 100%; background-repeat: no-repeat; background-size: cover;">
+
+          <img id="inv1" src="./inviteImages/floral_2.png" alt="flowers"/>
+
+          <img id="inv2"  src="inviteImages/stripes_edit.png" alt="stripes image"/>
+
+          <img id="inv3"  src="./inviteImages/Swirls_blur.png" alt="swirls image"/>
+
+          <div id="invDisplay">
+
+            <table id="invInner">
+
+              <!-- Display Text from keyup events-->  
+              <tr> 
+                 <td id="iP1">
+                   <span id="invPtrOne"></span>
+                </td>
+              </tr>
+
+              <tr>
+                <td id="ptnrAnd">and</td>
+              </tr>
+
+              <tr id="trPtr2">
+                <td id="iP2"><span id="invPtrTwo"></span></td> 
+              </tr>       
+
+              <tr>
+                <td id="cele">invite you to celebrate their marriage</td>
+              </tr>
+            
+              <tr>
+                <td id="iP3"><span id="wedDate"></span>
+                </td> 
+              </tr>
+
+              <tr>
+                <td id="iP4"><span id="wedTime"></span>
+                </td>
+              </tr>
+              
+              <tr>
+                <td id="preAdd">at
+                </td>
+              </tr>
+
+              <tr id="trAdd">
+                <td id="iP5"><span id="wedAdd"></span></td>
+              </tr>
+            </table>
+
+          </div>
+
+        </div>
+
         
-    </body>
-    <script src="P2.js"></script>
+
+          
+        
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+<script src="P2.js"></script>
 </html>

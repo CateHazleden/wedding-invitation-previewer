@@ -25,6 +25,20 @@ window.onclick = function(event) {
 }
 
 // Reset button connect to clear innerDiv onkey events
+function btnReset() {
+  document.getElementById("basicDetails").reset();
+
+  document.getElementById("invPtrOne").innerHTML = "";
+
+  document.getElementById("invPtrTwo").innerHTML = "";
+
+  document.getElementById("wedDate").innerHTML = "";
+
+  document.getElementById("wedTime").innerHTML = "";
+
+  document.getElementById("wedAdd").innerHTML = "";
+
+}
 
 
 // Flex box actions
